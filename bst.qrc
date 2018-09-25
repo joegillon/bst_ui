@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file alias="small_donkey.png">views/images/small_donkey.png</file>
+    <file alias="blue_streets.png">views/images/blue_streets.png</file>
+    <file alias="adlai_button.jpg">views/images/adlai_button.jpg</file>
+    <file alias="ragtime_cowboy.png">views/images/ragtime_cowboy.png</file>
+    <file alias="cowboy_small.png">views/images/cowboy_small.png</file>
+    <file alias="cowboy_large.jpg">views/images/cowboy_large.jpg</file>
+    <file alias="map.png">views/images/GoogleMap.png</file>
+    <file alias="voters.png">views/images/voters.png</file>
+    <file alias="contacts.png">views/images/contacts.png</file>
+    <file alias="groups.png">views/images/groups.png</file>
+    <file alias="soap.png">views/images/soap.png</file>
+</qresource>
+</RCC>

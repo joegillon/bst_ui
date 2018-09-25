@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>849</width>
+    <height>558</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Bluestreets</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../bst.qrc">
+    <normaloff>:/small_donkey.png</normaloff>:/small_donkey.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>191</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../bst.qrc">:/blue_streets.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>271</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../bst.qrc">:/adlai_button.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>50</y>
+      <width>111</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A product of</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>80</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../bst.qrc">:/ragtime_cowboy.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>140</y>
+      <width>81</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../bst.qrc">:/cowboy_large.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>280</y>
+      <width>141</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All rights reserved</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>849</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTurf">
+    <property name="title">
+     <string>Turf</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuVoters">
+    <property name="title">
+     <string>Voters</string>
+    </property>
+    <addaction name="actionImport"/>
+    <addaction name="actionWorksheet"/>
+    <addaction name="actionExport"/>
+   </widget>
+   <widget class="QMenu" name="menuContacts">
+    <property name="title">
+     <string>Contacts</string>
+    </property>
+    <widget class="QMenu" name="menuImport">
+     <property name="title">
+      <string>Import</string>
+     </property>
+     <addaction name="actionCounty"/>
+     <addaction name="actionSpreadsheet"/>
+     <addaction name="actionEntry_Form"/>
+    </widget>
+    <widget class="QMenu" name="menuClean_Up">
+     <property name="title">
+      <string>Clean Up</string>
+     </property>
+     <addaction name="actionEmail_Dups"/>
+     <addaction name="actionPhone_Dups"/>
+     <addaction name="actionName_Address_Dups"/>
+     <addaction name="actionName_Only_Dups"/>
+     <addaction name="actionSync_with_Voters"/>
+    </widget>
+    <addaction name="menuImport"/>
+    <addaction name="actionBattle_Stations_2"/>
+    <addaction name="menuClean_Up"/>
+   </widget>
+   <widget class="QMenu" name="menuGroups">
+    <property name="title">
+     <string>Groups</string>
+    </property>
+   </widget>
+   <addaction name="menuTurf"/>
+   <addaction name="menuVoters"/>
+   <addaction name="menuContacts"/>
+   <addaction name="menuGroups"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionTurf"/>
+   <addaction name="actionVoters"/>
+   <addaction name="actionContacts"/>
+   <addaction name="actionGroups"/>
+  </widget>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionWorksheet">
+   <property name="text">
+    <string>Worksheet</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionImport_2">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionBattle_Stations">
+   <property name="text">
+    <string>Battle Stations</string>
+   </property>
+  </action>
+  <action name="actionExport_2">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionCounty">
+   <property name="text">
+    <string>County</string>
+   </property>
+  </action>
+  <action name="actionSpreadsheet">
+   <property name="text">
+    <string>Spreadsheet</string>
+   </property>
+  </action>
+  <action name="actionEntry_Form">
+   <property name="text">
+    <string>Entry Form</string>
+   </property>
+  </action>
+  <action name="actionBattle_Stations_2">
+   <property name="text">
+    <string>Battle Stations</string>
+   </property>
+  </action>
+  <action name="actionEmail_Dups">
+   <property name="text">
+    <string>Email Dups</string>
+   </property>
+  </action>
+  <action name="actionPhone_Dups">
+   <property name="text">
+    <string>Phone Dups</string>
+   </property>
+  </action>
+  <action name="actionName_Address_Dups">
+   <property name="text">
+    <string>Name + Address Dups</string>
+   </property>
+  </action>
+  <action name="actionName_Only_Dups">
+   <property name="text">
+    <string>Name Only Dups</string>
+   </property>
+  </action>
+  <action name="actionSync_with_Voters">
+   <property name="text">
+    <string>Sync with Voters</string>
+   </property>
+  </action>
+  <action name="actionTurf">
+   <property name="icon">
+    <iconset resource="../../bst.qrc">
+     <normaloff>:/map.png</normaloff>:/map.png</iconset>
+   </property>
+   <property name="text">
+    <string>Turf</string>
+   </property>
+  </action>
+  <action name="actionVoters">
+   <property name="icon">
+    <iconset resource="../../bst.qrc">
+     <normaloff>:/voters.png</normaloff>:/voters.png</iconset>
+   </property>
+   <property name="text">
+    <string>Voters</string>
+   </property>
+  </action>
+  <action name="actionContacts">
+   <property name="icon">
+    <iconset resource="../../bst.qrc">
+     <normaloff>:/contacts.png</normaloff>:/contacts.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contacts</string>
+   </property>
+  </action>
+  <action name="actionGroups">
+   <property name="icon">
+    <iconset resource="../../bst.qrc">
+     <normaloff>:/groups.png</normaloff>:/groups.png</iconset>
+   </property>
+   <property name="text">
+    <string>Groups</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../bst.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+QMainWindow {
+    background-color: red;
+}
+
+QMenuBar {
+    background-color: blue;
+    color: white;
+}
