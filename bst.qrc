@@ -11,5 +11,9 @@
     <file alias="contacts.png">views/images/contacts.png</file>
     <file alias="groups.png">views/images/groups.png</file>
     <file alias="soap.png">views/images/soap.png</file>
+    <file alias="plus.png">views/images/plus-icon.png</file>
+    <file alias="close.png">views/images/close-icon.png</file>
+    <file alias="drop.png">views/images/x-icon.png</file>
+    <file alias="save.png">views/images/save-icon.png</file>
 </qresource>
 </RCC>

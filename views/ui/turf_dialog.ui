@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>dlgTurf</class>
- <widget class="QDialog" name="dlgTurf">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>462</width>
-    <height>479</height>
+    <width>815</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Bluestreets Turf</string>
+   <string>Dialog</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="../../bst.qrc">
-    <normaloff>:/small_donkey.png</normaloff>:/small_donkey.png</iconset>
-  </property>
-  <widget class="QListWidget" name="lstTurf">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>411</width>
-     <height>361</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>431</width>
-     <height>61</height>
+     <x>30</x>
+     <y>60</y>
+     <width>641</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: gray</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -42,62 +31,79 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>112</width>
-      <height>34</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Add</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>68</width>
-      <height>19</height>
+      <width>611</width>
+      <height>80</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Turf</string>
+    <property name="styleSheet">
+     <string notr="true">background-color: skyblue</string>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>68</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>112</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>20</y>
+       <width>112</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QListView" name="listView">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>20</y>
-      <width>112</width>
-      <height>34</height>
+      <x>10</x>
+      <y>100</y>
+      <width>601</width>
+      <height>341</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Drop</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>20</y>
-      <width>112</width>
-      <height>34</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Close</string>
+    <property name="styleSheet">
+     <string notr="true">background-color: white</string>
     </property>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="../../bst.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

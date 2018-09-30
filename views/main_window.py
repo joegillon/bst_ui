@@ -1,15 +1,31 @@
 from PyQt5.QtWidgets import QMainWindow, QAction, QToolBar, QToolButton, QMenu, QLabel
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import QSize, Qt, QRect
+import bst_rc   # This import is necessary even though it's not "used".
+from views.turf_window import TurfWindow
 
 
 class MainWindow(QMainWindow):
 
     def __init__(self):
-        super().__init__()
+        super(MainWindow, self).__init__()
 
-        self.images = {}
-        self.__build_icons()
+        self.images = {
+            'small_donkey': QIcon(QPixmap(":/small_donkey.png")),
+            'turf': QIcon(QPixmap(":/map.png")),
+            'voters': QIcon(QPixmap(":/voters.png")),
+            'contacts': QIcon(QPixmap(":/contacts.png")),
+            'groups': QIcon(QPixmap(":/groups.png")),
+            'soap': QIcon(QPixmap(":/soap.png")),
+            'adlai': QPixmap(":/adlai_button.jpg"),
+            'blue_streets': QPixmap(":/blue_streets.png"),
+            'ragtime_cowboy': QPixmap(":/ragtime_cowboy.png"),
+            'cowboy_large': QPixmap(":/cowboy_large.jpg"),
+            'add_icon': QIcon(QPixmap(":/plus.png")),
+            'drop_icon': QIcon(QPixmap(":/drop.png")),
+            'close_icon': QIcon(QPixmap(":/close.png")),
+            'save_icon': QIcon(QPixmap(":/save.png"))
+        }
 
         self.setObjectName('MainWindow')
         self.resize(850, 560)
@@ -63,22 +79,11 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(grp_act)
         self.toolbar.addWidget(dta_btn)
 
-        self.__build_images()
         self.__add_labels()
 
-    def __build_icons(self):
-        self.images['small_donkey'] = QIcon(QPixmap(":/small_donkey.png"))
-        self.images['turf'] = QIcon(QPixmap(":/map.png"))
-        self.images['voters'] = QIcon(QPixmap(":/voters.png"))
-        self.images['contacts'] = QIcon(QPixmap(":/contacts.png"))
-        self.images['groups'] = QIcon(QPixmap(":/groups.png"))
-        self.images['soap'] = QIcon(QPixmap(":/soap.png"))
+        self.turf_window = None
 
-    def __build_images(self):
-        self.images['adlai'] = QPixmap(":/adlai_button.jpg")
-        self.images['blue_streets'] = QPixmap(":/blue_streets.png")
-        self.images['ragtime_cowboy'] = QPixmap(":/ragtime_cowboy.png")
-        self.images['cowboy_large'] = QPixmap(":/cowboy_large.jpg")
+        self.open_windows = []
 
     def __make_toolbutton(self, text, icon):
         btn = QToolButton(self)
@@ -127,7 +132,9 @@ class MainWindow(QMainWindow):
         self.sender().data()()
 
     def __turf_triggered(self):
-        print('turf')
+        self.turf_window = TurfWindow(self.images)
+        self.turf_window.show()
+        self.open_windows.append(self.turf_window)
 
     def __vtr_import_county(self):
         print('voter import county')
@@ -173,3 +180,7 @@ class MainWindow(QMainWindow):
 
     def __voter_sync(self):
         print('voter sync')
+
+    def closeEvent(self, *args, **kwargs):
+        for window in self.open_windows:
+            window.close()
